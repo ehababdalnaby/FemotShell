@@ -6,11 +6,12 @@
 
 int main()
 {
-	char input[20] = {0};
+	char input[50] = {0};
 	do
 	{
 		printf("Femot Shell > ");
-		scanf("%s",input);
+		scanf("%[^\n]*c",input);
+		scanf("%*[^\n]"); scanf("%*c");
 		printf("You said: %s\n",input);
 
 	}while(strcmp(input,"exit")!=0);
